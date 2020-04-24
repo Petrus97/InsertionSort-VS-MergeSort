@@ -25,3 +25,7 @@ def generate_arrays(dim):
 	for i in range(0, dim):
 		pickle.dump(dim-i, file)
 	file.close()
+
+	# if os.path.isfile(file_name): # if exist don't create new files
+	# 	pass
+	# else:

@@ -13,7 +13,7 @@ def mergesort_performance_random(dim):
     Array = []
     m_elapsed = []
     for element in array_length:
-        for i in range(1, 10):
+        for i in range(1, 11):
             with open("db/random_array.txt", "rb") as openfile:
                 count = 0
                 while count < element:
@@ -38,7 +38,7 @@ def insertionsort_performance_random(dim):
     Array = []
     m_elapsed = []
     for element in array_length:
-        for i in range(1, 10):
+        for i in range(1, 11):
             with open("db/random_array.txt", "rb") as openfile:
                 count = 0
                 while count < element:

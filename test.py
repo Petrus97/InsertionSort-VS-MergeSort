@@ -5,7 +5,7 @@ import sort_performance as sp
 
 def test_sorted():
     df = pd.DataFrame(columns=['Size', 'MergeSort', 'InsertionSort'])
-    df['Size'] = [100, 500, 1000, 2500, 5000, 10000, 25000]
+    df['Size'] = [100, 500, 1000, 2500, 5000, 7500, 10000, 15000, 25000, 35000, 50000]
     merge_time = sp.mergesort_performance_sorted(df['Size'])
     df['MergeSort'] = merge_time
     ins_time = sp.insertionsort_performance_sorted(df['Size'])
@@ -24,7 +24,7 @@ def test_sorted():
 
 def test_random():
     df = pd.DataFrame(columns=['Size', 'MergeSort', 'InsertionSort'])
-    df['Size'] = [100, 500, 1000, 2500, 5000, 10000, 25000]
+    df['Size'] = [100, 500, 1000, 2500, 5000, 7500, 10000, 15000, 25000, 35000, 50000]
     merge_time = sp.mergesort_performance_random(df['Size'])
     df['MergeSort'] = merge_time
     ins_time = sp.insertionsort_performance_random(df['Size'])
@@ -43,7 +43,7 @@ def test_random():
 
 def test_reverse():
     df = pd.DataFrame(columns=['Size', 'MergeSort', 'InsertionSort'])
-    df['Size'] = [100, 500, 1000, 2500, 5000, 10000, 25000]
+    df['Size'] = [100, 500, 1000, 2500, 5000, 7500, 10000, 15000, 25000, 35000, 50000]
     merge_time = sp.mergesort_performance_reverse(df['Size'])
     df['MergeSort'] = merge_time
     ins_time = sp.insertionsort_performance_reverse(df['Size'])
