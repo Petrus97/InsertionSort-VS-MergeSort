@@ -20,6 +20,7 @@ def test_sorted():
     plt.suptitle("InsertionSort vs MergeSort")
     plt.savefig('figures/sorted.png')
     plt.clf()
+    df.to_latex("results/sorted.tex")
 
 
 def test_random():
@@ -39,6 +40,7 @@ def test_random():
     plt.suptitle("InsertionSort vs MergeSort")
     plt.savefig('figures/random.png')
     plt.clf()
+    df.to_latex("results/random.tex")
 
 
 def test_reverse():
@@ -58,6 +60,7 @@ def test_reverse():
     plt.suptitle("InsertionSort vs MergeSort")
     plt.savefig('figures/reverse.png')
     plt.clf()
+    df.to_latex("results/reverse.tex")
 
 
 def test_all():

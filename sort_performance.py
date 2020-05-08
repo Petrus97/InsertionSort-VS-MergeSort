@@ -14,7 +14,7 @@ def mergesort_performance_random(dim):
     m_elapsed = []
     for element in array_length:
         for i in range(1, 11):
-            with open("db/random_array.txt", "rb") as openfile:
+            with open("db/random_array.pickle", "rb") as openfile:
                 count = 0
                 while count < element:
                     try:
@@ -39,7 +39,8 @@ def insertionsort_performance_random(dim):
     m_elapsed = []
     for element in array_length:
         for i in range(1, 11):
-            with open("db/random_array.txt", "rb") as openfile:
+            print("size: ", element, " i: ", i )
+            with open("db/random_array.pickle", "rb") as openfile:
                 count = 0
                 while count < element:
                     try:
@@ -51,6 +52,7 @@ def insertionsort_performance_random(dim):
             insertion_sort.insertion_sort(Array)
             end = time.perf_counter()
             elapsed.append(end-start)
+            print("size: ", element, " i: ", i, " elapsed: ", end - start)
             Array.clear()
         m_elapsed.append(sum(elapsed)/10)
         elapsed.clear()
@@ -65,8 +67,8 @@ def mergesort_performance_sorted(dim):
     Array = []
     m_elapsed = []
     for element in array_length:
-        for i in range(1, 10):
-            with open("db/ascending_ordered_array.txt", "rb") as openfile:
+        for i in range(1, 11):
+            with open("db/ascending_ordered_array.pickle", "rb") as openfile:
                 count = 0
                 while count < element:
                     try:
@@ -90,8 +92,9 @@ def insertionsort_performance_sorted(dim):
     Array = []
     m_elapsed = []
     for element in array_length:
-        for i in range(1, 10):
-            with open("db/ascending_ordered_array.txt", "rb") as openfile:
+        for i in range(1, 11):
+            print("size: ", element, " i: ", i )
+            with open("db/ascending_ordered_array.pickle", "rb") as openfile:
                 count = 0
                 while count < element:
                     try:
@@ -103,6 +106,7 @@ def insertionsort_performance_sorted(dim):
             insertion_sort.insertion_sort(Array)
             end = time.perf_counter()
             elapsed.append(end-start)
+            print("size: ", element, " i: ", i, " elapsed: ", end - start)
             Array.clear()
         m_elapsed.append(sum(elapsed)/10)
         elapsed.clear()
@@ -117,8 +121,8 @@ def mergesort_performance_reverse(dim):
     Array = []
     m_elapsed = []
     for element in array_length:
-        for i in range(1, 10):
-            with open("db/descending_ordered_array.txt", "rb") as openfile:
+        for i in range(1, 11):
+            with open("db/descending_ordered_array.pickle", "rb") as openfile:
                 count = 0
                 while count < element:
                     try:
@@ -142,8 +146,8 @@ def insertionsort_performance_reverse(dim):
     Array = []
     m_elapsed = []
     for element in array_length:
-        for i in range(1, 10):
-            with open("db/descending_ordered_array.txt", "rb") as openfile:
+        for i in range(1, 11):
+            with open("db/descending_ordered_array.pickle", "rb") as openfile:
                 count = 0
                 while count < element:
                     try:
@@ -155,6 +159,7 @@ def insertionsort_performance_reverse(dim):
             insertion_sort.insertion_sort(Array)
             end = time.perf_counter()
             elapsed.append(end-start)
+            print("size: ", element, " i: ", i, " elapsed: ", end - start)
             Array.clear()
         m_elapsed.append(sum(elapsed)/10)
         elapsed.clear()
