@@ -73,7 +73,7 @@ def test_reverse():
 def test_all():
     print("SORTED")
     test_sorted()
-    # print("RANDOM")
-    # test_random()
-    # print("REVERSE")
-    # test_reverse()
+    print("RANDOM")
+    test_random()
+    print("REVERSE")
+    test_reverse()
